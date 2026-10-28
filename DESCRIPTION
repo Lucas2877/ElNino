@@ -10,8 +10,7 @@ Description: Paquete hecho para la materia de programación II. Permite
     descargar los datos de estaciones meteorológicas del repositorio de la
     materia, calcular resúmenes de temperatura y precipitación por mes y
     estación, y graficar la temperatura media mensual.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
