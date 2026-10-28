@@ -16,3 +16,16 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/Lucas2877/ElNino
 BugReports: https://github.com/Lucas2877/ElNino/issues
+Depends: 
+    R (>= 4.1.0)
+Imports: 
+    dplyr,
+    ggplot2,
+    grDevices,
+    lubridate,
+    readr,
+    stats,
+    tidyr,
+    utils
+Suggests: 
+    curl
