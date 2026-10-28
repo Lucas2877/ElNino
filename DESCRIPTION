@@ -1,11 +1,19 @@
 Package: ElNino
-Title: What the Package Does (One Line, Title Case)
+Title: Lee, Resume y Grafica Datos Meteorológicos
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: c(
+    person("Lucas", "Bruno", , "lucasmateobruno2@gmail.com", role = c("aut", "cre")),
+    person("Valentino", "Ricci", role = "aut"),
+    person("Lucas", "Boveri", role = "aut")
+  )
+Description: Paquete hecho para la materia de programación II. Permite
+    descargar los datos de estaciones meteorológicas del repositorio de la
+    materia, calcular resúmenes de temperatura y precipitación por mes y
+    estación, y graficar la temperatura media mensual.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+URL: https://github.com/Lucas2877/ElNino
+BugReports: https://github.com/Lucas2877/ElNino/issues
