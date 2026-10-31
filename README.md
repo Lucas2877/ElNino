@@ -1,0 +1,31 @@
+
+<!-- README.md se genera a partir de README.Rmd. Editá este archivo. -->
+
+# ElNino
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+ElNino es un paquete de R para leer y analizar datos de estaciones
+meteorológicas.
+
+> **Aclaración:** este es un paquete de prueba que hicimos para el
+> parcial de la materia de programación en R. No está pensado para
+> usarse en trabajos reales.
+
+## Instalación
+
+Podés instalar el paquete desde GitHub con `pak`:
+
+``` r
+# install.packages("pak")
+pak::pak("Lucas2877/ElNino")
+```
+
+## Autores
+
+- Lucas Bruno ([@Lucas2877](https://github.com/Lucas2877)) – mantenedor
+- Valentino Ricci
+  ([@VALENTINO16-HUB](https://github.com/VALENTINO16-HUB))
+- Lucas Boveri ([@LucasBoveri](https://github.com/LucasBoveri))
