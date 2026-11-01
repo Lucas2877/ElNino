@@ -14,7 +14,7 @@ License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-URL: https://github.com/Lucas2877/ElNino
+URL: https://github.com/Lucas2877/ElNino, https://lucas2877.github.io/ElNino/
 BugReports: https://github.com/Lucas2877/ElNino/issues
 Depends: 
     R (>= 4.1.0)
