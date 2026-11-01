@@ -2,5 +2,6 @@
 
 export(grafico_temperatura_mensual)
 export(leer_estacion)
+export(precipitacion_mensual)
 export(tabla_resumen_temperatura)
 importFrom(dplyr,.data)
