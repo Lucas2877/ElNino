@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # ElNino
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 ElNino es un paquete de R para leer y analizar datos de estaciones
