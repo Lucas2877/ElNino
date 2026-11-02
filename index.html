@@ -49,15 +49,16 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="elnino">ElNino<a class="anchor" aria-label="anchor" href="#elnino"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="elnino-">ElNino <a class="anchor" aria-label="anchor" href="#elnino-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p>ElNino es un paquete de R para leer y analizar datos de estaciones meteorológicas.</p>
+<p>ElNino es un paquete de R para leer y analizar datos de estaciones meteorológicas. Permite descargar los datos de una estación, hacer una tabla resumen de la temperatura, calcular la precipitación de cada mes y graficar la temperatura media mensual.</p>
 <blockquote>
 <p><strong>Aclaración:</strong> este es un paquete de prueba que hicimos para el parcial de la materia de programación en R. No está pensado para usarse en trabajos reales.</p>
 </blockquote>
+<p><strong>¿Por qué ElNino?</strong> El nombre viene de El Niño, el fenómeno climático que calienta el océano Pacífico y cambia las lluvias y temperaturas en Argentina. Lo escribimos sin “ñ” porque los nombres de paquetes de R solo aceptan letras sin tilde.</p>
 <div class="section level2">
 <h2 id="instalación">Instalación<a class="anchor" aria-label="anchor" href="#instalaci%C3%B3n"></a>
 </h2>
@@ -65,6 +66,45 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"Lucas2877/ElNino"</span><span class="op">)</span></span></code></pre></div>
+<p>o con <code>remotes</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Lucas2877/ElNino"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="empezar-rápido">Empezar rápido<a class="anchor" aria-label="anchor" href="#empezar-r%C3%A1pido"></a>
+</h2>
+<p>El paquete trae el dataset <code>estaciones_ejemplo</code>, con datos de dos estaciones (NH0472 y NH0910) para 2015 y 2016, así se puede probar todo sin internet.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Lucas2877/ElNino" class="external-link">ElNino</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Promedio y desvío de la temperatura de cada estación</span></span>
+<span><span class="fu"><a href="reference/tabla_resumen_temperatura.html">tabla_resumen_temperatura</a></span><span class="op">(</span><span class="va">estaciones_ejemplo</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 3</span></span>
+<span><span class="co">#&gt;   estadistico NH0472 NH0910</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 promedio     19.1   18.2 </span></span>
+<span><span class="co">#&gt; 2 desvio        5.74   6.09</span></span>
+<span></span>
+<span><span class="co"># Precipitación acumulada de cada mes</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="reference/precipitacion_mensual.html">precipitacion_mensual</a></span><span class="op">(</span><span class="va">estaciones_ejemplo</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 6 × 3</span></span>
+<span><span class="co">#&gt;   id     mes        precip_acumulada_mensual</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;  &lt;date&gt;                        &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 NH0472 2015-01-01                    221  </span></span>
+<span><span class="co">#&gt; 2 NH0472 2015-02-01                     99  </span></span>
+<span><span class="co">#&gt; 3 NH0472 2015-03-01                    125. </span></span>
+<span><span class="co">#&gt; 4 NH0472 2015-04-01                     66.6</span></span>
+<span><span class="co">#&gt; 5 NH0472 2015-05-01                    156  </span></span>
+<span><span class="co">#&gt; 6 NH0472 2015-06-01                     69.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Temperatura media de cada mes</span></span>
+<span><span class="fu"><a href="reference/grafico_temperatura_mensual.html">grafico_temperatura_mensual</a></span><span class="op">(</span><span class="va">estaciones_ejemplo</span>, colores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"darkorange"</span>, <span class="st">"steelblue"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-grafico-1.png" alt="" width="100%"></p>
+<p>Para descargar los datos completos de una estación (necesita internet):</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">nh0472</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/leer_estacion.html">leer_estacion</a></span><span class="op">(</span><span class="st">"NH0472"</span><span class="op">)</span></span></code></pre></div>
+<p>En la viñeta <code><a href="articles/ElNino.html">vignette("ElNino")</a></code> hay un ejemplo más completo.</p>
 </div>
 <div class="section level2">
 <h2 id="autores">Autores<a class="anchor" aria-label="anchor" href="#autores"></a>
@@ -74,6 +114,11 @@
 <li>Valentino Ricci (<a href="https://github.com/VALENTINO16-HUB" class="external-link">@VALENTINO16-HUB</a>)</li>
 <li>Lucas Boveri (<a href="https://github.com/LucasBoveri" class="external-link">@LucasBoveri</a>)</li>
 </ul>
+</div>
+<div class="section level2">
+<h2 id="código-de-conducta">Código de conducta<a class="anchor" aria-label="anchor" href="#c%C3%B3digo-de-conducta"></a>
+</h2>
+<p>Este proyecto tiene un <a href="CODE_OF_CONDUCT.html">Código de Conducta</a>. Al participar aceptás respetarlo.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
