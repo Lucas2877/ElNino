@@ -1,4 +1,17 @@
 url: https://lucas2877.github.io/ElNino/
 template:
   bootstrap: 5
+lang: es
 
+reference:
+- title: Leer datos
+  contents:
+  - leer_estacion
+- title: Resúmenes y gráficos
+  contents:
+  - tabla_resumen_temperatura
+  - precipitacion_mensual
+  - grafico_temperatura_mensual
+- title: Datos de ejemplo
+  contents:
+  - estaciones_ejemplo
