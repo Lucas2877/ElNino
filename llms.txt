@@ -45,3 +45,9 @@ pak::pak("Lucas2877/ElNino")
 - [`estaciones_ejemplo`](https://lucas2877.github.io/ElNino/reference/estaciones_ejemplo.md)
   : Datos de ejemplo de dos estaciones meteorológicas
 
+# Articles
+
+### All vignettes
+
+- [Introducción a
+  ElNino](https://lucas2877.github.io/ElNino/articles/ElNino.md):
