@@ -10,10 +10,91 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 4
 )
 ```
 
+En esta viñeta mostramos cómo usar las cuatro funciones del paquete con un
+ejemplo completo.
+
 ```{r setup}
 library(ElNino)
+```
+
+## 1. Leer los datos
+
+La función `leer_estacion()` descarga los datos de una estación a partir de su
+`id`. Como necesita internet, en esta viñeta no la corremos, pero se usa así:
+
+```{r, eval = FALSE}
+nh0472 <- leer_estacion("NH0472")
+nh0910 <- leer_estacion("NH0910")
+
+# Para trabajar con las dos juntas las unimos una debajo de la otra
+estaciones <- rbind(nh0472, nh0910)
+```
+
+Para los ejemplos usamos `estaciones_ejemplo`, que viene con el paquete. Tiene
+los datos de las estaciones NH0472 y NH0910 para los años 2015 y 2016.
+
+```{r}
+head(estaciones_ejemplo)
+```
+
+## 2. Tabla resumen de la temperatura
+
+`tabla_resumen_temperatura()` calcula el promedio y el desvío estándar de la
+temperatura de cada estación. Los estadísticos quedan en las filas y las
+estaciones en las columnas.
+
+```{r}
+tabla_resumen_temperatura(estaciones_ejemplo)
+```
+
+## 3. Precipitación de cada mes
+
+`precipitacion_mensual()` suma la lluvia de todos los días de cada mes, para
+cada estación. La columna `mes` tiene el primer día de cada mes.
+
+```{r}
+precipitacion <- precipitacion_mensual(estaciones_ejemplo)
+head(precipitacion)
+```
+
+Por ejemplo, podemos ver cuál fue el mes más lluvioso de cada estación:
+
+```{r}
+precipitacion |>
+  dplyr::group_by(id) |>
+  dplyr::filter(precip_acumulada_mensual == max(precip_acumulada_mensual))
+```
+
+## 4. Gráfico de la temperatura mensual
+
+`grafico_temperatura_mensual()` grafica la temperatura media de cada mes. Si no
+le pasamos colores, los elige al azar (usamos `set.seed()` para que siempre
+salgan los mismos).
+
+```{r}
+set.seed(42)
+grafico_temperatura_mensual(estaciones_ejemplo)
+```
+
+También podemos elegir los colores y el título:
+
+```{r}
+grafico_temperatura_mensual(
+  estaciones_ejemplo,
+  colores = c("darkorange", "steelblue"),
+  titulo = "Temperatura media mensual (2015-2016)"
+)
+```
+
+Como devuelve un gráfico de ggplot2, se le pueden sumar más capas:
+
+```{r}
+grafico_temperatura_mensual(estaciones_ejemplo, colores = c("darkorange", "steelblue")) +
+  ggplot2::theme_minimal()
 ```
