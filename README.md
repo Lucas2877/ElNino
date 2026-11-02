@@ -7,6 +7,7 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/Lucas2877/ElNino/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Lucas2877/ElNino/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ElNino es un paquete de R para leer y analizar datos de estaciones
