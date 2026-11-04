@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/Lucas2877/ElNino/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Lucas2877/ElNino/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/Lucas2877/ElNino/graph/badge.svg)](https://app.codecov.io/gh/Lucas2877/ElNino)
 <!-- badges: end -->
 
 ElNino es un paquete de R para leer y analizar datos de estaciones
