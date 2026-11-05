@@ -24,4 +24,4 @@ contando:
 ## Código de conducta
 
 Al participar en este proyecto aceptás respetar el
-[Código de Conducta](../CODE_OF_CONDUCT.md).
+[Código de Conducta](https://github.com/Lucas2877/ElNino/blob/master/CODE_OF_CONDUCT.md).
