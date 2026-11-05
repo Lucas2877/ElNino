@@ -1,0 +1,13 @@
+# Cómo citar el paquete. citation("ElNino") muestra esta información.
+bibentry(
+  bibtype = "Manual",
+  title = "ElNino: Lee, Resume y Grafica Datos Meteorologicos",
+  author = c(
+    person("Lucas", "Bruno"),
+    person("Valentino", "Ricci"),
+    person("Lucas", "Boveri")
+  ),
+  year = "2026",
+  note = "Paquete de R hecho para la materia de programacion",
+  url = "https://github.com/Lucas2877/ElNino"
+)
