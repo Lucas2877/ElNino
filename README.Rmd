@@ -77,6 +77,25 @@ nh0472 <- leer_estacion("NH0472")
 ```
 
 En la viñeta `vignette("ElNino")` hay un ejemplo más completo.
+## Funciones
+
+| Función | Qué hace |
+|---|---|
+| [`leer_estacion()`](https://lucas2877.github.io/ElNino/reference/leer_estacion.html) | Descarga los datos de una estación meteorológica. |
+| [`tabla_resumen_temperatura()`](https://lucas2877.github.io/ElNino/reference/tabla_resumen_temperatura.html) | Calcula el promedio y el desvío de la temperatura de cada estación. |
+| [`precipitacion_mensual()`](https://lucas2877.github.io/ElNino/reference/precipitacion_mensual.html) | Suma la precipitación de cada mes para cada estación. |
+| [`grafico_temperatura_mensual()`](https://lucas2877.github.io/ElNino/reference/grafico_temperatura_mensual.html) | Grafica la temperatura media de cada mes por estación. |
+
+El paquete también trae el dataset
+[`estaciones_ejemplo`](https://lucas2877.github.io/ElNino/reference/estaciones_ejemplo.html).
+
+## Enlaces
+
+- Sitio web del paquete: <https://lucas2877.github.io/ElNino/>
+- Referencia de funciones: <https://lucas2877.github.io/ElNino/reference/>
+- Viñeta: <https://lucas2877.github.io/ElNino/articles/ElNino.html>
+- Código fuente: <https://github.com/Lucas2877/ElNino>
+- Reportar un problema: <https://github.com/Lucas2877/ElNino/issues>
 
 ## Autores
 
