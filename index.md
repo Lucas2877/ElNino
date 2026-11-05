@@ -80,7 +80,9 @@ nh0472 <- leer_estacion("NH0472")
 
 En la viñeta
 [`vignette("ElNino")`](https://lucas2877.github.io/ElNino/articles/ElNino.md)
-hay un ejemplo más completo. \## Funciones
+hay un ejemplo más completo.
+
+## Funciones
 
 | Función | Qué hace |
 |----|----|
@@ -100,6 +102,8 @@ El paquete también trae el dataset
 - Viñeta: <https://lucas2877.github.io/ElNino/articles/ElNino.html>
 - Código fuente: <https://github.com/Lucas2877/ElNino>
 - Reportar un problema: <https://github.com/Lucas2877/ElNino/issues>
+- Cómo contribuir:
+  <https://github.com/Lucas2877/ElNino/blob/master/.github/CONTRIBUTING.md>
 
 ## Autores
 
