@@ -25,4 +25,4 @@ Si encontrás un error, abrí un
 ## Código de conducta
 
 Al participar en este proyecto aceptás respetar el [Código de
-Conducta](https://lucas2877.github.io/CODE_OF_CONDUCT.md).
+Conducta](https://github.com/Lucas2877/ElNino/blob/master/CODE_OF_CONDUCT.md).
