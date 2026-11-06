@@ -9,7 +9,7 @@ test_that("leer_estacion da error si la ruta no es texto", {
 
 test_that("leer_estacion descarga una estacion", {
   # Este test necesita internet, si no hay se saltea
-  skip_if_offline()
+  skip_si_no_hay_internet()
 
   datos <- leer_estacion("NH0472")
 
@@ -19,7 +19,7 @@ test_that("leer_estacion descarga una estacion", {
 })
 
 test_that("leer_estacion da error si la estacion no existe", {
-  skip_if_offline()
+  skip_si_no_hay_internet()
 
   expect_error(leer_estacion("NO_EXISTE"), "No se pudo descargar")
 })
