@@ -26,6 +26,11 @@ tabla_resumen_temperatura <- function(datos) {
     stop("A 'datos' le faltan las columnas: ", paste(faltantes, collapse = ", "))
   }
 
+  # Validamos que la temperatura sea un número
+  if (!is.numeric(datos$temperatura_abrigo_150cm)) {
+    stop("La columna temperatura_abrigo_150cm tiene que ser numerica.")
+  }
+
   # Promedio y desvío de la temperatura por estación
   resumen <- datos |>
     dplyr::group_by(.data$id) |>
