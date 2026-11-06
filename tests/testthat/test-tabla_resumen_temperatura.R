@@ -28,3 +28,9 @@ test_that("tabla_resumen_temperatura da error si faltan columnas", {
   datos_sin_temp <- data.frame(id = c("A", "B"))
   expect_error(tabla_resumen_temperatura(datos_sin_temp), "temperatura_abrigo_150cm")
 })
+
+test_that("tabla_resumen_temperatura da error si la temperatura no es numerica", {
+  datos_texto <- data.frame(id = "A", temperatura_abrigo_150cm = "20")
+  expect_error(tabla_resumen_temperatura(datos_texto), "numerica")
+})
+
